@@ -1,0 +1,5 @@
+a:hover { text-decoration: none !important; color :initial; border: 0px; -moz-outline-style: none;}
+a:focus { text-decoration: none !important; color :initial; outline: none;-moz-outline-style: none;}
+a:active { text-decoration: none !important; color :initial; outline: none;-moz-outline-style: none;}
+a:visited { text-decoration: none !important; color :initial; outline: none;-moz-outline-style: none;}
+a:link { text-decoration: none !important; color :initial; outline: none;-moz-outline-style: none;}

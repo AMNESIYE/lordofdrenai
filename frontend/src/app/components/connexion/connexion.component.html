@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-body">
+    <div class="text-center">
+      <span class="text-danger">{{errorMessage}}</span>
+      <form  class="form-signin" [formGroup]="loginForm" (ngSubmit)="loginUser()" novalidate>
+        <label for="inputEmail" class="sr-only">Adresse email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Nom d'utilisateur" formControlName="pseudo">
+        <label for="inputPassword" class="sr-only">Mot de passe</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" formControlName="mdp">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+        <a routerLink="/subscribe">S'inscrire</a>
+      </form>
+    </div>
+  </div>
+</div>

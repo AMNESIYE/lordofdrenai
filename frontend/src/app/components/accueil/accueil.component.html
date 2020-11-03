@@ -1,0 +1,64 @@
+<div style="background-color: #14151a;">
+  <table border="1" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td width="50%" style="background-image: url(https://i.imgur.com/McAlo8i.png);
+    border-left: solid 3px #8da395;
+    border-radius: 0;
+    border-right: solid 1px #000;
+    box-shadow: none; height: 50px; padding-left: 14px;">
+        <h2 style="font-family: Cinzel, serif;
+    font-size: 18px; margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    font-weight: 400;
+    color: white; vertical-align: middle;">Règles et Contextes</h2>
+      </td>
+      <td width="50%" style="background-image: url(https://i.imgur.com/McAlo8i.png);
+    border-left: solid 3px #8da395;
+    border-radius: 0;
+    border-right: solid 1px #000;
+    box-shadow: none; height: 50px; padding-left: 14px;">
+        <h2 style="font-family: Cinzel, serif;
+    font-size: 18px; margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    font-weight: 400;
+    color: white; vertical-align: middle;">Démarrer l'aventure</h2>
+      </td>
+    </tr>
+    <tr *ngFor="let acc of accueilCategorie | pairs">
+      <td style="height: 260px; background-image: url({{acc[0].image}});">
+        <a routerLink="/categorie/{{acc[0].id}}">
+          <h1 style="color: white; text-align: center;">{{acc[0].nom}}</h1>
+        </a>
+      </td>
+      <td style="height: 260px; background-image: url({{acc[1].image}});">
+        <a routerLink="/categorie/{{acc[1].id}}">
+          <h1 style="color: white; text-align: center;">{{acc[1].nom}}</h1>
+        </a>
+      </td>
+    </tr>
+    <tr> <!-- Seulement si connecté -->
+      <td colspan="2" width="100%" style="height: 200px;">
+        <h4 style="color: white; text-align: center;">Liens profils et informations personnage</h4>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" width="100%" style="background-image: url(https://i.imgur.com/McAlo8i.png);
+    border-left: solid 3px #8da395;
+    border-radius: 0;
+    border-right: solid 1px #000;
+    box-shadow: none; height: 50px; text-align: center;">
+        <h2 style="font-family: Cinzel, serif;
+    font-size: 18px; margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-end: 0;
+    margin-inline-start: 0;
+    font-weight: 400;
+    color: white; vertical-align: middle;">Terres Drenaï</h2>
+      </td>
+    </tr>
+  </table>
+</div>

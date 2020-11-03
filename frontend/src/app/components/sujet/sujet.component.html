@@ -1,0 +1,121 @@
+<div style="background-color: #14151a; color: #6c757d;">
+  <ng-container *ngIf="sujet">
+    <table border="1" cellpadding="0" cellspacing="0" width="990px" style="margin: auto;">
+      <tr>
+        <td>
+          <div style="margin-bottom: 20px; text-align: center;">STYLISER ICI</div>
+        </td>
+      </tr>
+      <ng-container *ngIf="postList != null && postList.length > 0">
+        <tr *ngFor="let post of postList">
+          <td style="height: 100px;);">
+            <ng-container *ngFor="let user of utilisateurPostList">
+              <table *ngIf="user.id == post.idUtilisateur" border="1" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td align="top" style="">
+                    <div style="background-color: #F5F5F5;
+    background-image: url(https://i.imgur.com/ZKzEOxv.png);
+    border: solid 1px #000;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 0 2px rgba(0,0,0,0.1);
+    color: #fff;
+    flex-basis: 200px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    float: left;
+    font-size: 13px;
+    margin: 6px 3px 0;
+    max-height: 670px;
+    min-height: 639px;
+    padding: 16px 25px;
+    position: relative;
+    text-align: center;">
+                      <div>
+                        {{user.pseudo}}
+                      </div>
+                      <div style="height: 450px;">
+                        <a href="#">
+                          <img src="{{user.photo}}" style="height: 450px;
+    width: 200px; border: 1px solid #000;
+    border-radius: 3px!important;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3), 0 0 1px rgba(0,0,0,0.3);"/>
+                        </a>
+                      </div>
+                      <div style="display: block;
+    margin-top: 22px;
+    text-align: left;
+    width: 100%;">Expérience : {{user.experience}}<br/>
+                        Argent : {{user.argent}}
+                      </div>
+                    </div>
+                  </td>
+                  <td align="top" width="730px" style="">
+                    <div style="background-image: url(https://i.imgur.com/7Bpbh8x.jpg);
+    border: solid 1px #000;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 0 2px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 6px 3px 0;
+    min-width: 0;
+    padding: 10px 4px;
+    position: relative;
+    text-align: initial;
+    width: 100%;
+    z-index: 500;">
+                      <div style="float: right;
+    font-size: 13px;
+    margin-left: 22px;">
+                        caler des boutons
+                      </div>
+                      <div style="background-color: #6f7983;
+    border: solid 1px #000;
+    border-radius: 3px;
+    color: #000;
+    font-family: Lora, serif;
+    font-size: 12px;
+    margin-top: 10px;
+    min-height: 554px;
+    padding: 10px 12px;
+    text-align: justify;">
+                        {{post.texte}}
+                      </div>
+                      <div style="background-color: rgba(0,0,0,0);
+    border-radius: 3px;
+    border-top: none;
+    color: #fff;
+    margin: auto 0 -6px;
+    overflow: hidden;
+    padding: 8px 26px;">
+                        {{post.created | date:'HH:mm:ss dd/MM/yyyy'}}
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </ng-container>
+          </td>
+        </tr>
+      </ng-container>
+      <tr>
+        <td>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">ON FAIT DU TEXTE</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit" class="btn btn-primary">Poster</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p>Des trucs à mettre en bas si besoin.</p>
+        </td>
+      </tr>
+    </table>
+  </ng-container>
+  <ng-container *ngIf="!sujet">
+    <p>Pas de catégorie trouvée</p>
+  </ng-container>
+</div>
